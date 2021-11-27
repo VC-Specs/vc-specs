@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "Certificates": {
+      "$ref": "#/definitions/Certificates"
+    }
+  },
+  "required": [
+    "Certificates"
+  ],
+  "title":"Certificates",
+  "definitions": {
+    "Certificates": {
+      "$id": "#/properties/Certificates",
+      "type": "object",
+      "title": "The Certificates Schema",
+      "required": [],
+      "properties": {
+        "name": {
+          "$id": "#/properties/name",
+          "type": "string",
+          "title": "Full name"
+        },
+        "grades": {
+          "type": "string",
+          "title": "Grades"
+        },
+        "certificateType": {
+          "type": "string",
+          "enum": ["Attendance", "Skill", "Work", "Reputation"],
+          "title": "Certificate Type"
+        },
+        "mobile": {
+          "type": "string",
+          "title": "Student Mobile number"
+        },
+        "email": {
+          "type": "string",
+          "title": "Student Email id"
+        },
+        "course": {
+          "type": "string",
+          "title": "Course"
+        },
+        "skill": {
+          "type": "string",
+          "title": "Skills"
+        },
+        "awardedOn": {
+          "type":"string",
+          "title": "Awared on"
+        }
+      }
+    }
+  },
+  "_osConfig": {
+    "osComment": ["This section contains the OpenSABER specific configuration information",
+      "privateFields: Optional; list of field names to be encrypted and stored in database",
+      "signedFields: Optional; list of field names that must be pre-signed",
+      "indexFields: Optional; list of field names used for creating index. Enclose within braces to indicate it is a composite index. In this definition, (serialNum, CertificatesCode) is a composite index and CertificatesName is a single column index.",
+      "uniqueIndexFields: Optional; list of field names used for creating unique index. Field names must be different from index field name",
+      "systemFields: Optional; list of fields names used for system standard information like created, updated timestamps and userid"],
+    "privateFields": [],
+    "signedFields": [],
+    "indexFields": [],
+    "uniqueIndexFields": [],
+    "systemFields": [
+      "_osCreatedAt",
+      "_osUpdatedAt",
+      "_osCreatedBy",
+      "_osUpdatedBy",
+      "_osAttestedData",
+      "_osClaimId",
+      "_osState"
+    ],
+    "attestationPolicies": [],
+    "autoAttestationPolicies": [],
+    "ownershipAttributes": [],
+    "credentialTemplate": {
+      "@context": ["https://www.w3.org/2018/credentials/v1", "https://gist.githubusercontent.com/kesavanp123/88b70994bc2b88e3ab81eafbe755f28b/raw/7fe573bb1c5160917139fb03376f97ed6dbf752b/certificate-schema.json"],
+      "type": ["VerifiableCredential"],
+      "issuanceDate": "2021-08-27T10:57:57.237Z",
+      "credentialSubject": {
+        "type": "Person",
+        "name": "{{name}}"
+      },
+      "evidence": [{
+        "type": ["Certificate"],
+        "certificateType": "{{certificateType}}",
+        "course": "{{course}}",
+        "skill":"{{skill}}",
+        "awardedOn":"{{awardedOn}}"
+      }],
+      "issuer": "did:issuer:sunbird"
+    },
+    "inviteRoles": ["anonymous"],
+    "roles": ["institute"],
+    "enableLogin": false
+  }
+}

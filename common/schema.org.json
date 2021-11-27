@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Schema org extract",
+  "$id": "https://schema.org/",
+  "definitions": {
+    "DefinedTerm": {
+      "type": "object",
+      "properties": {
+        "termCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "subjectOf": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
