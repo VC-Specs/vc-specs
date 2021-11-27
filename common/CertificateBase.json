@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Certificate Base",
+  "$id": "https://re",
+  "definitions": {
+    "CertificateBase" : {
+      "properties": {
+        "certificateId": {
+          "type": "string"
+        },
+        "issuer": {
+          "type": "string"
+        },
+        "issuedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "signedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "validFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "validUntil": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Subject": {
+      "name": {
+        "$id": "#/properties/name",
+        "type": "string",
+        "title": "Full name"
+      },
+      "mobile": {
+        "type": "string",
+        "title": "Student Mobile number"
+      },
+      "email": {
+        "type": "string",
+        "title": "Student Email id"
+      }
+    }
+  }
+}
