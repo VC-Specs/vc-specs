@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@version": "1.1",
+    "@protected": true,
+    "DefinedTerm": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#DefinedTerm",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "termCode": "schema:Text",
+        "name": "schema:Text",
+        "description": "schema:Text",
+        "image": "schema:Text",
+        "url": "schema:Text",
+        "subjectOf": "schema:Text"
+      }
+    }
+  }
+}

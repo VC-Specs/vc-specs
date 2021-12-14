@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "@version": "1.1",
+    "@protected": true,
+    "Address": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#Address",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "plot": "schema:Text",
+        "street": "schema:Text",
+        "landmark": "schema:Text",
+        "locality": "schema:Text",
+        "state": "schema:Text",
+        "district": "schema:Text",
+        "village": "schema:Text",
+        "pincode": "schema:Text"
+      }
+    },
+    "ContactDetails": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#ContactDetails",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "email": "schema:email",
+        "mobile": "schema:Text",
+        "address": "https://github.com/sunbird-specs/vc-specs#Address"
+      }
+    },
+    "IdentityDetails": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#IdentityDetails",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "fullName": "schema:Text",
+        "gender": "schema:Text",
+        "dob": "schema:Text",
+        "identityHolder": {
+          "@id": "https://github.com/sunbird-specs/vc-specs#identityHolder",
+          "@context": {
+            "id": "@id",
+            "@version": 1.1,
+            "@protected": true,
+            "type": "schema:Text",
+            "value": "schema:Text"
+          }
+        }
+      }
+    }
+  }
+}

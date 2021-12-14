@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@version": "1.1",
+    "@protected": true,
+    "Student": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#Student",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "identityDetails": "Common.json/#/definitions/IdentityDetails",
+        "contactDetails": "Common.json/#/definitions/ContactDetails"
+      }
+    }
+  }
+}

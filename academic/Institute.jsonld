@@ -1,0 +1,48 @@
+{
+  "@context": {
+    "@version": "1.1",
+    "@protected": true,
+    "Institute": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#Institute",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "instituteName": "schema:Text",
+        "address": "Common.json/#/definitions/Address",
+        "establishmentYear": "schema:Text",
+        "gstnId": "schema:Text",
+        "contactNumber": "schema:Text",
+        "email": "schema:Text",
+        "website": "schema:Text",
+        "category": "schema:Text",
+        "schoolType": "schema:Text",
+        "instituteManagement": "schema:Text",
+        "committee": "schema:Text",
+        "adminName": "schema:Text",
+        "adminEmail": "schema:Text",
+        "adminMobile": "schema:Text",
+        "courses": "schema:Text",
+        "skills": "schema:Text"
+      }
+    },
+    "Courses": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#Courses",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "name": "schema:Text"
+      }
+    },
+    "Skills": {
+      "@id": "https://github.com/sunbird-specs/vc-specs#Skills",
+      "@context": {
+        "id": "@id",
+        "@version": 1.1,
+        "@protected": true,
+        "name": "schema:Text"
+      }
+    }
+  }
+}
