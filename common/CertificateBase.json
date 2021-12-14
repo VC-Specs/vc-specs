@@ -3,7 +3,7 @@
   "title": "Certificate Base",
   "$id": "https://re",
   "definitions": {
-    "CertificateBase" : {
+    "CertificateBase": {
       "properties": {
         "certificateId": {
           "type": "string"
@@ -30,18 +30,21 @@
       }
     },
     "Subject": {
-      "name": {
-        "$id": "#/properties/name",
-        "type": "string",
-        "title": "Full name"
-      },
-      "mobile": {
-        "type": "string",
-        "title": "Student Mobile number"
-      },
-      "email": {
-        "type": "string",
-        "title": "Student Email id"
+      "type": "object",
+      "properties": {
+        "name": {
+          "$id": "#/properties/name",
+          "type": "string",
+          "title": "Full name"
+        },
+        "mobile": {
+          "type": "string",
+          "title": "Student Mobile number"
+        },
+        "email": {
+          "type": "string",
+          "title": "Student Email id"
+        }
       }
     }
   }
