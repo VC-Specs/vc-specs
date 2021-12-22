@@ -5,38 +5,37 @@
 
     "id": "@id",
     "type": "@type",
-        
+
     "ProofOfWorkExperience": {
       "@id": "https://github.com/sunbird-specs/vc-specs/work#ProofOfWorkExperience",
       "@context": {
         "version": "0.1",
         "@protected": true,
-        
+
         "id": "@id",
         "type": "@type",
-        
+
         "cred": "https://www.w3.org/2018/credentials#",
         "dc": "http://purl.org/dc/terms",
+        "sunvc": "https://github.com/sunbird-specs/vc-specs#"
         "powex": "https://github.com/sunbird-specs/vc-specs/work#",
         "schema": "https://www.schema.org",
         "sec": "https://w3id.org/security#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-       
-        "certificateId": "@id",
+
         "issuer": { "@id": "cred:issuer", "@type": "schema:Organisation" },
         "legalName": "schema:legalName",
-        "address": { "@id": "schema:address", "@type": "schema:PostalAddress" },
-        "issuedOn": "cred:issuanceDate",
-        "credentialSubject": { "@id": "cred:credentialSubject", "@type": "schema:Person" },
-        "name": "schema:name",
+        "address": { "@id": "schema:address", "@type": "sunvc:Address" },
+        "issuedOn": "cred:issued",
+        "credentialSubject": { "@id": "cred:credentialSubject", "@type": ["schema:Person", "sunvc:Subject"] },
         "jobTitle": "schema:jobTitle",
         "worksFor": { "@id": "schema:worksFor", "@type": "schema:Organisation" },
         "worksAs": { "@id": "powex:worksAs", "@type": "schema:OccupationalRole" },
-        "roleType": { "@id": "powex:roleType", "@type": "string" },
+        "roleType": { "@id": "powex:roleType", "@type": "schema:Text" },
         "startDate": { "@id": "schema:startDate", "@type": "xsd:dateTime" },
         "endDate": { "@id": "schema:endDate", "@type": "xsd:dateTime" },
-        "occupationalIndustry": { "@id": "occupationalIndustry", "@type": "string" },
-        "occupationalCategory": { "@id": "occupationalCategory", "@type": "string" },
+        "occupationalIndustry": { "@id": "occupationalIndustry", "@type": "schema:Text" },
+        "occupationalCategory": { "@id": "occupationalCategory", "@type": "schema:Text" },
         "workLocation": { "@id": "powex:workLocation", "@type": "powex:WorkLocation" },
         "proof": "sec:proof"
       }
@@ -47,7 +46,7 @@
         "id": "@id",
         "type": "@type",
         "issuer": { "@id": "cred:issuer", "@type": "schema:Organisation" },
-        "issuedOn": "cred:issuanceDate",
+        "issuedOn": "cred:issued",
         "isPartOf": "dc:isPartOf",
         "roleCompensation": { "@id": "powex:roleCompensation", "@type": "powex:RoleCompensation" },
         "rolePerformance": { "@id": "powex:rolePerformance", "@type": "powex:RolePerformance" },
@@ -58,21 +57,21 @@
     "WorkLocation": {
       "@id": "https://github.com/sunbird-specs/vc-specs/work#WorkLocation",
       "@context": {
-        "address": "schema:address",
-        "geoLocation": "schema:geoCoordinates"
+        "address": { "@id": schema:address", "@type": "sunvc:Address" },
+        "geo": "schema:geo"
       }
     },
     "RoleCompensation": {
       "@id": "https://github.com/sunbird-specs/vc-specs/work#RoleCompensation",
       "@context": {
         "monthlySalaryRange": { "@id": "powex:monthlySalaryRange", "@type": "schema:NumericRange" },
-        "salaryCurrency": { "@id": "powex:salaryCurrency", "@type": "string" }
+        "salaryCurrency": { "@id": "powex:salaryCurrency", "@type": "schema:Text" }
       }
     },
     "RolePerformance": {
       "@id": "https://github.com/sunbird-specs/vc-specs/work#RolePerformance",
       "@context": {
-        "ratingCount": { "@id": "powex:ratingCount", "@type": "number" },
+        "ratingCount": { "@id": "powex:ratingCount", "@type": "schema:Number" },
         "ratingValue": "schema:ratingValue",
         "bestPossibleRating": "schema:bestRating",
         "worstPossibleRating": "schema:worstRating",
