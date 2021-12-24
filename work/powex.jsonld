@@ -28,14 +28,9 @@
         "address": { "@id": "schema:address", "@type": "sunvc:Address" },
         "issuedOn": "cred:issued",
         "credentialSubject": { "@id": "cred:credentialSubject", "@type": ["schema:Person", "sunvc:Subject"] },
-        "jobTitle": "schema:jobTitle",
+        "lastJobTitle": "schema:jobTitle",
         "worksFor": { "@id": "schema:worksFor", "@type": "schema:Organisation" },
-        "worksAs": { "@id": "powex:worksAs", "@type": "schema:OccupationalRole" },
-        "roleType": { "@id": "powex:roleType", "@type": "schema:Text" },
-        "startDate": { "@id": "schema:startDate", "@type": "xsd:dateTime" },
-        "endDate": { "@id": "schema:endDate", "@type": "xsd:dateTime" },
-        "occupationalIndustry": { "@id": "occupationalIndustry", "@type": "schema:Text" },
-        "occupationalCategory": { "@id": "occupationalCategory", "@type": "schema:Text" },
+        "worksAs": { "@id": "powex:worksAs", "@type": "powex:OccupationalRole" },
         "workLocation": { "@id": "powex:workLocation", "@type": "powex:WorkLocation" },
         "proof": "sec:proof"
       }
@@ -54,10 +49,23 @@
         "proof": "sec:proof"
       }
     },
+    "OccupationalRole": {
+      "@id": "https://github.com/sunbird-specs/vc-specs/work#OccupationalRole",
+      "@context": {
+        "id": "@id",
+        "type": "@type",
+        "roleType": { "@id": "powex:roleType", "@type": "schema:Text" },
+        "jobTitle": "schema:jobTitle",
+        "startDate": "schema:startDate",
+        "endDate": "schema:endDate",
+        "occupationalIndustry": { "@id": "powex:occupationalIndustry", "@type": "schema:Text" },
+        "occupationalCategory": { "@id": "powex:occupationalCategory", "@type": "schema:Text" }
+      }
+    },
     "WorkLocation": {
       "@id": "https://github.com/sunbird-specs/vc-specs/work#WorkLocation",
       "@context": {
-        "address": { "@id": schema:address", "@type": "sunvc:Address" },
+        "address": { "@id": "schema:address", "@type": "sunvc:Address" },
         "geo": "schema:geo"
       }
     },
