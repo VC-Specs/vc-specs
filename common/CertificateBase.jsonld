@@ -2,29 +2,34 @@
   "@context": {
     "@version": "1.1",
     "@protected": true,
+
     "CertificateBase": {
       "@id": "https://github.com/sunbird-specs/vc-specs#CertificateBase",
       "@context": {
-        "id": "@id",
         "@version": 1.1,
         "@protected": true,
+
+        "id": "@id",
+
+        "cred": "https://www.w3.org/2018/credentials#",
+        "schema": "http://schema.org#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+
         "certificateId": "schema:Text",
-        "issuer": "schema:Text",
-        "issuedOn": "schema:Text",
-        "signedDate": "schema:Text",
-        "validFrom": "schema:Text",
-        "validUntil": "schema:Text"
+        "issuedOn": "cred:issued",
+        "signedDate": "xsd:DateTime"
       }
     },
+
     "Subject": {
       "@id": "https://github.com/sunbird-specs/vc-specs#Subject",
       "@context": {
         "id": "@id",
         "@version": 1.1,
         "@protected": true,
-        "name": "schema:Text",
-        "mobile": "schema:Text",
-        "email": "schema:Text"
+
+        "sunvc": "https://github.com/sunbird-specs/vc-specs#",
+        "identity": "sunvc:identity"
       }
     }
   }
