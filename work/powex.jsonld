@@ -17,7 +17,7 @@
 
         "cred": "https://www.w3.org/2018/credentials#",
         "dc": "http://purl.org/dc/terms",
-        "sunvc": "https://github.com/sunbird-specs/vc-specs#"
+        "sunvc": "https://github.com/sunbird-specs/vc-specs#",
         "powex": "https://github.com/sunbird-specs/vc-specs/work#",
         "schema": "https://www.schema.org",
         "sec": "https://w3id.org/security#",
